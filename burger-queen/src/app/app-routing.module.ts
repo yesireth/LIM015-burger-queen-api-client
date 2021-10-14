@@ -8,6 +8,7 @@ import { OrdersReadyComponent } from './views/orders-ready/orders-ready.componen
 
 const routes: Routes = [
 {path:'',component: LogInComponent},
+{path:'log-in',component:LogInComponent},
 {path:'admin-users',component:AdminUsersComponent},
 {path:'admin-products',component:AdminProductsComponent},
 {path:'menu',component:MenuComponent},
