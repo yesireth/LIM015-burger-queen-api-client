@@ -7,13 +7,11 @@ import { MenuComponent } from './views/menu/menu.component';
 import { OrdersReadyComponent } from './views/orders-ready/orders-ready.component';
 
 const routes: Routes = [
-{path:'',redirectTo:'log-in',pathMatch: 'full'},
-{path:'log-in',component: LogInComponent},
+{path:'',component: LogInComponent},
 {path:'admin-users',component:AdminUsersComponent},
 {path:'admin-products',component:AdminProductsComponent},
 {path:'menu',component:MenuComponent},
 {path:'orders-ready',component:OrdersReadyComponent}
-
 ];
 
 @NgModule({
