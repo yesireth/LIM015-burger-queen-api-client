@@ -1,26 +1,17 @@
 
-  <!-- <img src="../assets/Recurso 1.png" alt="">
-  <form>
-    <label>
-      Email:
-      <input type="text" name="name" />
-    </label>
-    <label>
-      Contraseña:
-      <input type="text" name="name" />
-    </label>
-    <input type="submit" value="Entrar" />
-    </form>
-   --> 
-   <img src="../assets/Recurso 1.png" alt="">
-   <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" >
+  <img src="../assets/Recurso 1.png" class="img-fluid" alt="Responsive image">
+<div class="w-60 p-3">
+   <div class="mb-3 row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
-    <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" routerLink="menu">botón</button>
-  </form>
+  </div>
+
+    <button class="w-50" type='text'routerLink='/menu'>Ingresar</button>
+
+</div>
