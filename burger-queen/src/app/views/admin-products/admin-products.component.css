@@ -28,8 +28,8 @@
 .btn-users:hover{
     background-color:#C06641;
     color: white;
-    border:none;
 }
+
 .table-products{
     background: rgba(251, 244, 225, 0.95);
     width: 80vw;
@@ -38,19 +38,21 @@
     font-size: 20px;
     border-radius: 20px;
 }
+.div-output,
 .table-output{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto 150px 150px;
+}
+.div-output{
+    grid-column: 1/6;
 }
 .name-table{
     font-family: 'Roboto', sans-serif;
     border-bottom: 5px solid;
     padding: 5px;
-}
-.edit,
-.trash{
     text-align: center;
 }
+
 .btn-trash,
 .btn-edit{
     background: none;
@@ -58,12 +60,14 @@
     cursor: pointer;
     color: #97310F;
     font-size: 20px;
+    text-align: center;
 }
 .name-product,
 .name-price,
 .name-type{
     padding: 10px;
     font-size: 20px;
+    text-align: center;
 }
 .input-data{
     font-size: 20px;
