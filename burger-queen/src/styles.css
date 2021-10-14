@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    background: #F5E7BC;
+    margin: 0;
+}
+.img-papas,
+.img-tomate,
+.img-hoja{
+    position: absolute;
+    right:0;
+    z-index: -10;
+}
+.img-tomate{
+    left: 0;
+    bottom: 0;
+    width: 300px;
+}
+.img-papas{
+    bottom: 0;
+    width: 220px;
+}
