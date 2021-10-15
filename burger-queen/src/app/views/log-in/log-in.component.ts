@@ -10,6 +10,12 @@ export class LogInComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    alert("este evento es al inicializar la pantalla")
+  }
+
+  login() {
+    alert("este evento es al dar click en iniciar sesion")
   }
 
 }
+
