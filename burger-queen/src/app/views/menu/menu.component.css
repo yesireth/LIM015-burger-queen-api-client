@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.admin-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table-products{
+    background: rgba(251, 244, 225, 0.95);
+    width: 80vw;
+    color: #97310F;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+.div-output,
+.table-order{
+    display: grid;
+    grid-template-columns: auto auto 150px 150px;
+}
+.div-output{
+    grid-column: 1/5;
+}
+.name-table{
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 5px solid;
+    padding: 5px;
+    text-align: center;
+}
+
+.btn-trash,
+.btn-edit{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #97310F;
+    font-size: 20px;
+    text-align: center;
+}
+
+.name-product{
+    padding: 10px;
+    font-size: 20px;
+}
+.name-price,
+.name-cant{
+    padding: 10px;
+    text-align: center;
+}
+.name-amount{
+    padding: 15px;
+}
+.fas{
+    cursor: pointer;
+}
+.input-name{
+    border: none;
+    width: 350px;
+    height: 45px;
+    font-size: 20px;
+    color: #97310F;
+    background-color: rgba(255, 255, 255, 0.604);
+    margin-left: 20px;
+    outline: none;
+}
+.fa-times{
+    position: absolute;
+    right:40px;
+}

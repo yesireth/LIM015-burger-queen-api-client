@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.admin-products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons-div{
+    margin:20px;
+}
+.btn-products,
+.btn-users{
+    background-color:#F5E7BC;
+    outline: none;
+    border:3px solid #C06641;
+    padding: 10px 20px;
+    color: #97310F;
+    border-radius: 10px;
+    margin:0  20px;
+    font-size:  20px;
+    cursor: pointer;
+}
+.btn-products:hover{
+    background-color:#C06641;
+    color: white;
+
+}
+.btn-users:hover{
+    background-color:#C06641;
+    color: white;
+}
+.table-products{
+    background: rgba(251, 244, 225, 0.95);
+    width: 80vw;
+    color: #97310F;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.div-output,
+.table-output{
+    display: grid;
+    grid-template-columns: 200px auto 150px 150px ;
+}
+.div-output{
+    grid-column: 1/5;
+}
+.name-table{
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 5px solid;
+    padding: 5px;
+    text-align: center;
+}
+.btn-trash,
+.btn-edit{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #97310F;
+    font-size: 20px;
+}
+.name-product,
+.name-email{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.input-data{
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.btn-create-users{
+    float:right;
+    color: white;
+    background-color: #97310F; 
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
