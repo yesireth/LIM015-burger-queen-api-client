@@ -1,8 +1,6 @@
 import { NgModule }           from '@angular/core';
-import { FormsModule }        from '@angular/forms';
-
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -12,9 +10,9 @@ import { AdminProductsComponent } from './views/admin-products/admin-products.co
 import { AdminUsersComponent } from './views/admin-users/admin-users.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { OrdersReadyComponent } from './views/orders-ready/orders-ready.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { LogInComponent } from './views/log-in/log-in.component'
+
 
 @NgModule({
   declarations: [
