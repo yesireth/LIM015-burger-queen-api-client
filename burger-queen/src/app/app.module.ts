@@ -8,13 +8,13 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
 import { OrdersComponent } from './components/orders/orders.component';
-import { AdminProductsComponent } from './views/admin-products/admin-products.component';
-import { AdminUsersComponent } from './views/admin-users/admin-users.component';
-import { MenuComponent } from './views/menu/menu.component';
-import { OrdersReadyComponent } from './views/orders-ready/orders-ready.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+import { AdminUsersComponent } from './components/admin-users/admin-users.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { OrdersReadyComponent } from './components/orders-ready/orders-ready.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { LogInComponent } from './views/log-in/log-in.component'
+import { LogInComponent } from './components/log-in/log-in.component'
 
 @NgModule({
   declarations: [
