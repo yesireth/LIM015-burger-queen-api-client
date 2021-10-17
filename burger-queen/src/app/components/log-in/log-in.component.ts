@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{FormGroup,FormControl, Validators, FormGroupName, FormControlName} from '@angular/forms'
+import { FormGroup,FormControl, Validators, FormGroupName, FormControlName} from '@angular/forms'
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
@@ -7,18 +9,20 @@ import{FormGroup,FormControl, Validators, FormGroupName, FormControlName} from '
 })
 export class LogInComponent implements OnInit {
   logInForm = new FormGroup({
-  email: new FormControl('',Validators.required),
-  password : new FormControl('',Validators.required)
+    email: new FormControl('',Validators.required),
+    password : new FormControl('',Validators.required)
+  })
 
-})
-  constructor() { }
+  constructor(private AuthService: AuthService) {
+
+  }
 
   ngOnInit(): void {
-   
+   console.log(this.AuthService.Auth())
   }
 
    login(form:string) {
-  alert('toxica')
+   alert('toxica')
     console.log(form)
   }
 
