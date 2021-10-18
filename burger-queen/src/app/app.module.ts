@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LogInComponent } from './components/log-in/log-in.component'
+import { AdminProductsComponent } from './components/admin-products/admin-products.component'
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
 import { ReadyOrdersComponent } from './components/ready-orders/ready-orders.component';
 import { PendingOrdersComponent } from './components/pending-orders/pending-orders.component';
-import { ButonsComponent } from './components/butons/butons.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 
 
@@ -21,7 +22,8 @@ import { ButonsComponent } from './components/butons/butons.component';
     LogInComponent,
     ReadyOrdersComponent,
     PendingOrdersComponent,
-    ButonsComponent
+    ButtonsComponent,
+    AdminProductsComponent
   ],
   imports: [
     FormsModule,
