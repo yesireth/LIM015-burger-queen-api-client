@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup,FormControl, Validators, FormGroupName, FormControlName} from '@angular/forms'
 import { AuthService } from '../../services/auth.service';
 
@@ -15,17 +16,23 @@ export class LogInComponent implements OnInit {
     password : new FormControl('',Validators.required)
   })
 
-  constructor(private AuthService: AuthService) {
+  constructor(private AuthService: AuthService, private router:Router) {
   }
   ngOnInit(): void {
+    this.checkLocalStorage();
   }
-
+  checkLocalStorage(){
+    if(localStorage.getItem('token')){
+      this.router.navigate(['/menu'])
+    }
+  }
    login() {
     this.AuthService.Auth(this.logInForm.value).subscribe(
       data => {
         localStorage.setItem('token',data.token)
         console.log('success', data)
-        this.router.navigate(['menu'])
+        this.router.navigate(['/menu'])
+/*        this.router.navigate(['admin-products']); */
       },
       error => {
         if(error.status > 400){
@@ -34,6 +41,6 @@ export class LogInComponent implements OnInit {
         else if (error.status == 400){
           alert('Por favor complete los campos')
         }
-  })
+    })
    } 
 }
