@@ -7,10 +7,10 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private Url = "https://fireburguer.herokuapp.com/auth"; // URL to web api
+  private Url = "https://chamaburger.herokuapp.com/auth"; // URL to web api
   private AuthObject = {
-    "email": "admin@localhost",
-   "password": "changeme"
+    "email": "yesireth8@gmail.com",
+   "password": "123456"
   }
 
   constructor(private http: HttpClient) {}

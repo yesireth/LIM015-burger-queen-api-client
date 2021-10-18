@@ -3,8 +3,8 @@
    <form class="logIn-form" [formGroup]="logInForm"  (ngSubmit)="login(logInForm.value)">
       <input type="text" class="input-email" id="inputEmail" formControlName="email" placeholder="  e-mail">
       <input type="password" class="input-password" id="inputPassword"  formControlName="password"placeholder="  contraseña">  
-      <button class="logIn-button" type='submit' routerLink='/menu'>Ingresar</button> 
-      <app-butons></app-butons>
+      <button class="logIn-button" type='submit' routerLink='/admin-products'>Ingresar</button> 
+
       <app-products></app-products>
       <button class="logIn-button" type='submit' >Ingresar</button> 
   </form>
