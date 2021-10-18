@@ -22,6 +22,7 @@ export class LogInComponent implements OnInit {
    login() {
     this.AuthService.Auth(this.logInForm.value).subscribe( r =>{
       this.response = r;
+      console.log(r.token)
      })
   }
 
