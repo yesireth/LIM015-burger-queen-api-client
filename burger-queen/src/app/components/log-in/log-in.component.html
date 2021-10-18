@@ -1,6 +1,6 @@
  <header class="header">
   <img src="../assets/bq-logo.png" class="img-login" alt="Responsive image">
-   <form class="logIn-form" [formGroup]="logInForm"  (ngSubmit)="login(logInForm.value)">
+   <form class="logIn-form" [formGroup]="logInForm"  (ngSubmit)="login()">
       <input type="text" class="input-email" id="inputEmail" formControlName="email" placeholder="  e-mail">
       <input type="password" class="input-password" id="inputPassword"  formControlName="password"placeholder="  contraseña">  
       <button class="logIn-button" type='submit' routerLink='/admin-products'>Ingresar</button> 

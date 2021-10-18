@@ -8,22 +8,21 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
+  response: any;
   logInForm = new FormGroup({
     email: new FormControl('',Validators.required),
     password : new FormControl('',Validators.required)
   })
 
   constructor(private AuthService: AuthService) {
-
   }
-
   ngOnInit(): void {
-   console.log(this.AuthService.Auth())
   }
 
-   login(form:string) {
-   alert('toxica')
-    console.log(form)
+   login() {
+    this.AuthService.Auth(this.logInForm.value).subscribe( r =>{
+      this.response = r;
+     })
   }
 
 }
