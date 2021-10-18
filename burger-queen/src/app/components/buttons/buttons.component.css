@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    padding-bottom: 0px;
+}
+.img-login{
+    width: 200px;
+}
+.admin-container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
 .buttons{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: center;
+    gap: 50px;
 }
 .btn{
     background:none;

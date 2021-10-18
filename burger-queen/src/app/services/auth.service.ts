@@ -15,9 +15,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
   public Auth(){
-    return this.http.post(this.Url, this.AuthObject).pipe(
-      map(res => res.toString())
-    )
+    return this.http.post(this.Url, this.AuthObject).subscribe(res=>console.log(res))
   }
 }
 /*   yesireth8@gmail.com
