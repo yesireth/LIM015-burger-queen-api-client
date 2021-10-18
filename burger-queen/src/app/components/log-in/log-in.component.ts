@@ -32,7 +32,6 @@ export class LogInComponent implements OnInit {
         localStorage.setItem('token',data.token)
         console.log('success', data)
         this.router.navigate(['/menu'])
-/*        this.router.navigate(['admin-products']); */
       },
       error => {
         if(error.status > 400){
@@ -41,6 +40,6 @@ export class LogInComponent implements OnInit {
         else if (error.status == 400){
           alert('Por favor complete los campos')
         }
-    })
+      })
    } 
 }
