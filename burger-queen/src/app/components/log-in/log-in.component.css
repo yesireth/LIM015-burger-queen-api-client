@@ -33,4 +33,5 @@ header{
     border: none;
     color: white;
     font-size: 18px;
+    cursor: pointer;
 }
