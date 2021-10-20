@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   clickAddTodo(){
     this.result=confirm('¿En serio quieres salir?')
     if(this.result){
