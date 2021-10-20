@@ -9,7 +9,6 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  [x: string]: any;
   response: any;
   logInForm = new FormGroup({
     email: new FormControl('',Validators.required),
@@ -27,6 +26,7 @@ export class LogInComponent implements OnInit {
     }
   }
    login() {
+
     this.AuthService.Auth(this.logInForm.value).subscribe(
       data => {
         localStorage.setItem('token',data.token)

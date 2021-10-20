@@ -7,13 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+    private result:any
   constructor(private router:Router){ }
 
   ngOnInit(): void {
   }
   clickAddTodo(){
-    localStorage.clear();
-    this.router.navigate([''])
+    this.result=confirm('¿En serio quieres salir?')
+    if(this.result){
+      localStorage.clear();
+      this.router.navigate([''])
+    }
   }
+
 }

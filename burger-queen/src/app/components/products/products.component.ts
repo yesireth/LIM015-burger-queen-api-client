@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProductService } from '../../services/products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -10,7 +10,7 @@ export class ProductsComponent implements OnInit {
   public comentario: string;
   public year: number;
   
-  constructor() {
+  constructor(private productsService: ProductService ) {
     this.titulo="hola soy un titulo";
     this.comentario= "este es un comentario";
     this.year= 2020;
@@ -18,6 +18,10 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    alert("se carga ngOnInit ProductsComponent!!!!!!!!!!!!!!!!")
+    this.productsService.getProducts().subscribe( r => {
+      console.log(r)
+    })
   }
 
 }

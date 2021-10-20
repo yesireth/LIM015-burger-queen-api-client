@@ -16,8 +16,8 @@ export class AuthService {
   constructor(private http: HttpClient) {}
   Auth(user:any): Observable<any> {
     this.AuthObject["email"]= user.email
-    console.log(user.password);
     this.AuthObject["password"]= user.password
      return this.http.post(this.Url, this.AuthObject)
   }
+
 }
