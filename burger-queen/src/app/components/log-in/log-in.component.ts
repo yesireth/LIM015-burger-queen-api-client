@@ -29,7 +29,6 @@ export class LogInComponent implements OnInit {
   this.AuthService.Auth(this.logInForm.value).subscribe(
     data => {
       localStorage.setItem('token',data.token)
-      console.log('success', data)
       this.router.navigate(['/menu'])
     },
     error => {
