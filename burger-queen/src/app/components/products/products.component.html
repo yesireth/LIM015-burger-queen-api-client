@@ -1,5 +1,11 @@
-<li *ngFor="let data of data">
-    <ul>{{data.name}}</ul>
-    <ul>{{data.type}}</ul>
-    <ul>{{data.price}}</ul>
-</li>
+<aside>
+    <section class="container-menu">
+        <ul class ="products-menu" *ngFor="let data of data">
+            <li>{{data.name}}</li>
+           <!--  <li>{{data.type}}</li> -->
+            <li>{{data.price}}</li>
+        </ul>
+    </section>
+</aside>
+
+
