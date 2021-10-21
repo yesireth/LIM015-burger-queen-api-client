@@ -1,6 +1,10 @@
 
 <aside>
     <app-header></app-header>
+    <div class="buttons-div">
+        <button type="button" (click)="desayuno()" class="btn-products" routerLink='/admin-products'>Desayuno</button>
+        <button type="button" (click)="almuerzo()" class="btn-users" routerLink='/admin-users'>Alumerzo</button>
+    </div>
     <section class="menu-section">
         <app-products></app-products>
         <section class="admin-menu">
