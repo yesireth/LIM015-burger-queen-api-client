@@ -14,7 +14,6 @@ export class ProductService {
   getProducts(): Observable<any> {
     //definen los headers
     this.token = localStorage.getItem('token')
-    console.log(this.token)
     const config = {
       headers: { token: this.token }
   };
