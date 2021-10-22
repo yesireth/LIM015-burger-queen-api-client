@@ -7,32 +7,27 @@ import { ProductService } from '../../services/products.service';
 })
 export class MenuComponent implements OnInit {
   data:Array<any>=[];
-  almuerzo1:Array<any>=[];
+  lunch:Array<any>=[];
+  breakfast:Array<any>=[];
+
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe( r => {
-      this.data = r
-  })
+    this.productsService.getProducts().subscribe(element => {
+      this.data = element
+    })
   }
-  desayuno(){
-
-    this.productsService.getProducts().subscribe( r => {
-      this.data = r
-      this.almuerzo1 = this.data.filter(e=> e.type === 'almuerzo')
-        console.log(this.almuerzo1)
-  })
-
+  breakfastBtn(){
+    this.productsService.getProducts().subscribe( element => {
+      this.data = element
+      this.breakfast = this.data.filter(itens=> itens.type === 'desayuno')
+        console.log(this.breakfast)
+    })
   }
-  almuerzo(){
-    alert('almuerzo')
-    
-
-
-
-
-
-
-
-    
+  lunchBtn(){
+    this.productsService.getProducts().subscribe( element => {
+      this.data = element
+      this.lunch = this.data.filter(itens=> itens.type === 'almuerzo')
+        console.log(this.lunch)
+    })
   }
 }
