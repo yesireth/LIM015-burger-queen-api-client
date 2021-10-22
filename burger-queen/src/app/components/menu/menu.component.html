@@ -2,35 +2,44 @@
 <aside>
     <app-header></app-header>
     <div class="buttons-div">
-        <button type="button" (click)="breakfastBtn()" class="btn-products" routerLink='/admin-products'>Desayuno</button>
-        <button type="button" (click)="lunchBtn()" class="btn-users" routerLink='/admin-users'>Alumerzo</button>
+        <button type="button" (click)="breakfastBtn()" class="btn-products">Desayuno</button>
+        <button type="button" (click)="lunchBtn()" class="btn-users">Almuerzo</button>
     </div>
-    <section class="admin-menu">
-        <form class="table-products">
-            Cliente:<input type="text" class="input-name" id="inputName" >
-            <i class="fas fa-times"></i>
-            <div class="table-order">
-                <p class="name-table">Nombre</p>
-                <p class="name-table">Precio</p>
-                <p class="name-table">Cantidad</p>
-                <p class="name-table"></p>
-                <form action=""></form>
-                <div class="div-output">
-                    <p class="name-product">Hamburguesa</p>
-                    <p class="name-price">10$</p>
-                    <p class="name-cant">
-                        <i class="fas fa-angle-up"></i>
-                        <span class="name-amount">5</span>
-                        <i class="fas fa-angle-down"></i>
-                    </p>
-                    <button type="button" class="btn-trash">
-                        <i class="fas fa-trash "></i>
-                    </button>
+    <section class="menu-section">
+        <aside class="menu-products">
+            <section class="container-menu">
+                <ul class ="products-menu" *ngFor="let product of data">
+                    <li>{{product.name}}</li>
+                    <li>{{product.price}}</li>
+                </ul>
+            </section>
+        </aside>
+        <section class="admin-menu">
+            <form class="table-products">
+                Cliente:<input type="text" class="input-name" id="inputName" >
+                <i class="fas fa-times"></i>
+                <div class="table-order">
+                    <p class="name-table">Nombre</p>
+                    <p class="name-table">Precio</p>
+                    <p class="name-table">Cantidad</p>
+                    <p class="name-table"></p>
+                    <form action=""></form>
+                    <div class="div-output">
+                        <p class="name-product">Hamburguesa</p>
+                        <p class="name-price">10$</p>
+                        <p class="name-cant">
+                            <i class="fas fa-angle-up"></i>
+                            <span class="name-amount">5</span>
+                            <i class="fas fa-angle-down"></i>
+                        </p>
+                        <button type="button" class="btn-trash">
+                            <i class="fas fa-trash "></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <button class="logIn-button" type='submit' >Ingresar</button> 
-        </form>
+                <button class="logIn-button" type='submit' >Ingresar</button> 
+            </form>
+        </section>
     </section>
 </aside>
 
-<app-products></app-products>
