@@ -17,17 +17,17 @@ export class MenuComponent implements OnInit {
     })
   }
   breakfastBtn(){
-    this.productsService.getProducts().subscribe( element => {
-      this.data = element
-      this.breakfast = this.data.filter(items=> items.type === 'desayuno')
-        console.log(this.breakfast)
-    })
+    this.breakfast = this.data.filter(items=> items.type === 'desayuno')
+    this.data=[];
+    console.log(this.breakfast)
   }
   lunchBtn(){
-    this.productsService.getProducts().subscribe( element => {
-      this.data = element
-      this.lunch = this.data.filter(items=> items.type === 'almuerzo')
-        console.log(this.lunch)
-    })
+    this.lunch = this.data.filter(items=> items.type === 'almuerzo')
+    console.log(this.lunch)
   }
+  breakfastoOrder(breakfast:any){
+    console.log(breakfast.name + " " + breakfast._id);
+   return breakfast.name + " " + breakfast._id
+  }
+
 }

@@ -8,13 +8,14 @@
     <section class="menu-section">
         <aside class="menu-products">
             <section class="container-menu">
-                <ul class ="products-menu" *ngFor="let data of breakfast">
-                    <li>{{data.name}}</li>
-                    <li>{{data.price}}</li>
+                <ul class ="products-menu" *ngFor="let data of breakfast" (click)="breakfastoOrder(data)"
+                >
+                    <li>{{data.name}}</li>  
+                    <li>$.{{data.price}}</li>
                 </ul>
                 <ul class ="products-menu" *ngFor="let data of lunch">
                     <li>{{data.name}}</li>
-                    <li>{{data.price}}</li>
+                    <li>$.{{data.price}}</li>
                 </ul>
             </section>
         </aside>
