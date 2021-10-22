@@ -19,14 +19,14 @@ export class MenuComponent implements OnInit {
   breakfastBtn(){
     this.productsService.getProducts().subscribe( element => {
       this.data = element
-      this.breakfast = this.data.filter(itens=> itens.type === 'desayuno')
+      this.breakfast = this.data.filter(items=> items.type === 'desayuno')
         console.log(this.breakfast)
     })
   }
   lunchBtn(){
     this.productsService.getProducts().subscribe( element => {
       this.data = element
-      this.lunch = this.data.filter(itens=> itens.type === 'almuerzo')
+      this.lunch = this.data.filter(items=> items.type === 'almuerzo')
         console.log(this.lunch)
     })
   }

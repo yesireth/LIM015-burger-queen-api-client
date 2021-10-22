@@ -2,15 +2,19 @@
 <aside>
     <app-header></app-header>
     <div class="buttons-div">
-        <button type="button" (click)="breakfastBtn()" class="btn-products">Desayuno</button>
-        <button type="button" (click)="lunchBtn()" class="btn-users">Almuerzo</button>
+        <button type="button" (click)="breakfastBtn()" class="btn-products" value="desayuno">Desayuno</button>
+        <button type="button" (click)="lunchBtn()" class="btn-users" value="almuerzo">Almuerzo</button>
     </div>
     <section class="menu-section">
         <aside class="menu-products">
             <section class="container-menu">
-                <ul class ="products-menu" *ngFor="let product of data">
-                    <li>{{product.name}}</li>
-                    <li>{{product.price}}</li>
+                <ul class ="products-menu" *ngFor="let data of breakfast">
+                    <li>{{data.name}}</li>
+                    <li>{{data.price}}</li>
+                </ul>
+                <ul class ="products-menu" *ngFor="let data of lunch">
+                    <li>{{data.name}}</li>
+                    <li>{{data.price}}</li>
                 </ul>
             </section>
         </aside>
