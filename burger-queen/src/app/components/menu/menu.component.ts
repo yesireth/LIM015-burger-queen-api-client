@@ -10,8 +10,9 @@ export class MenuComponent implements OnInit {
   almuerzo1:Array<any>=[];
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
-  
- 
+    this.productsService.getProducts().subscribe( r => {
+      this.data = r
+  })
   }
   desayuno(){
 
