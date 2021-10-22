@@ -8,9 +8,13 @@
     <section class="menu-section">
         <aside class="menu-products">
             <section class="container-menu">
-                <ul class ="products-menu" *ngFor="let product of data">
-                    <li>{{product.name}}</li>
-                    <li>{{product.price}}</li>
+                <ul class ="products-menu" *ngFor="let data of breakfast">
+                    <li>{{data.name}}</li>
+                    <li>$.{{data.price}}</li>
+                </ul>
+                <ul class ="products-menu" *ngFor="let data of lunch">
+                    <li>{{data.name}}</li>
+                    <li>$.{{data.price}}</li>
                 </ul>
             </section>
         </aside>
@@ -43,12 +47,3 @@
     </section>
 </aside>
 
-<<<<<<< HEAD
-
-<li *ngFor="let break of breakfast">
-    <ul>{{breakfast}}</ul>
-    
-</li>
-<app-products></app-products>
-=======
->>>>>>> 2378717fc6b3d56741b47727c2c5f0d3d97bf99f
