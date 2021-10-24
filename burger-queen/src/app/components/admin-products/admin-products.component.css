@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+    font-size: 18px;
+}
 .admin-products{
     display: flex;
     flex-direction: column;
@@ -17,7 +20,6 @@
     color: #97310F;
     border-radius: 10px;
     margin:0  20px;
-    font-size:  20px;
     cursor: pointer;
 }
 .btn-products:hover{
@@ -33,9 +35,8 @@
 .table-products{
     background: rgba(251, 244, 225, 0.95);
     width: 80vw;
-    color: #97310F;
+    color: #B34622;
     padding: 20px;
-    font-size: 20px;
     border-radius: 20px;
 }
 .div-output,
@@ -58,19 +59,16 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #97310F;
-    font-size: 20px;
+    color: #B34622;
     text-align: center;
 }
 .name-product,
 .name-price,
 .name-type{
     padding: 10px;
-    font-size: 20px;
     text-align: center;
 }
 .input-data{
-    font-size: 20px;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -80,10 +78,9 @@
 .btn-crear{
     float:right;
     color: white;
-    background-color: #97310F; 
+    background-color: #B34622; 
     outline: none;
     border: none;
-    font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
