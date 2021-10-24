@@ -9,7 +9,7 @@ export class MenuComponent implements OnInit {
   data:Array<any>=[];
   lunch:Array<any>=[];
   breakfast:Array<any>=[];
-  public productName:Array<any>=[]
+  selectedItems: any[] = [];
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
     this.productsService.getProducts().subscribe(element => {
@@ -18,13 +18,16 @@ export class MenuComponent implements OnInit {
   }
   breakfastBtn(){
       this.breakfast = this.data.filter(itens=> itens.type === 'desayuno')
+      this.lunch = []
+     // console.log(this.lunch)
   }
   lunchBtn(){
       this.lunch = this.data.filter(itens=> itens.type === 'almuerzo')
-
+      this.breakfast = []
+      console.log(this.breakfast)
   }
-  breakfastoOrder(breakfast:any){
-    this.productName= breakfast.name
-    console.log( this.productName);
+  breakfastoOrder(product:object){
+    this.selectedItems.push({product});
+    console.log(this.selectedItems);
   }
 }
