@@ -10,8 +10,13 @@ export class MenuComponent implements OnInit {
   lunch:Array<any>=[];
   breakfast:Array<any>=[];
   selectedItems: any[] = [];
+<<<<<<< HEAD
   contador:any[] = [];
   
+=======
+  accountant:number=0;
+
+>>>>>>> f73ca6fceb11b7e23f1b2ce38487a8d86d73c62e
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
     this.productsService.getProducts().subscribe(element => {
@@ -28,10 +33,44 @@ export class MenuComponent implements OnInit {
       this.lunch = this.data.filter(itens=> itens.type === 'almuerzo')
       this.breakfast=[]
   }
+<<<<<<< HEAD
   breakfastoOrder(product:any){
     this.selectedItems.push({product});
     console.log(this.selectedItems);
     console.log( this.breakfast);
     this.contador
+=======
+  foodOrder(product:any){
+    if(this.selectedItems){
+      let productsSelect = this.selectedItems.find(element => element.product._id ===product._id)
+      if(productsSelect===undefined){
+        this.selectedItems.push({product});
+      }
+    }
+  }
+  addToCounter(product:any){
+    console.log(product)
+    let items=this.selectedItems.map(element => {
+      if(element.product._id ===product._id){
+        this.accountant = this.accountant+1
+        console.log(this.accountant)
+      }else{
+        this.accountant
+      }
+    })
+    return items
+  }
+  removeTheCounter(product:any){
+    let items=this.selectedItems.map(element => {
+      if(element.product._id ===product._id){
+        this.accountant = this.accountant-1
+        console.log(this.accountant)
+      }else{
+        this.accountant
+        console.log('hola')
+      }
+    })
+    return items
+>>>>>>> f73ca6fceb11b7e23f1b2ce38487a8d86d73c62e
   }
 }
