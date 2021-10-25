@@ -10,13 +10,8 @@ export class MenuComponent implements OnInit {
   lunch:Array<any>=[];
   breakfast:Array<any>=[];
   selectedItems: any[] = [];
-<<<<<<< HEAD
-  contador:any[] = [];
-  
-=======
   accountant:number=0;
 
->>>>>>> f73ca6fceb11b7e23f1b2ce38487a8d86d73c62e
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
     this.productsService.getProducts().subscribe(element => {
@@ -33,13 +28,6 @@ export class MenuComponent implements OnInit {
       this.lunch = this.data.filter(itens=> itens.type === 'almuerzo')
       this.breakfast=[]
   }
-<<<<<<< HEAD
-  breakfastoOrder(product:any){
-    this.selectedItems.push({product});
-    console.log(this.selectedItems);
-    console.log( this.breakfast);
-    this.contador
-=======
   foodOrder(product:any){
     if(this.selectedItems){
       let productsSelect = this.selectedItems.find(element => element.product._id ===product._id)
@@ -71,6 +59,5 @@ export class MenuComponent implements OnInit {
       }
     })
     return items
->>>>>>> f73ca6fceb11b7e23f1b2ce38487a8d86d73c62e
   }
 }
