@@ -16,7 +16,7 @@ export class ProductService {
     this.token = localStorage.getItem('token')
     const config = {
       headers: { token: this.token }
-  };
+    };
     return this.http.get(this.Url, config)
   }
 }
