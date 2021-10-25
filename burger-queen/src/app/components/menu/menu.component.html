@@ -2,11 +2,10 @@
 <aside>
     <app-header></app-header>
     <div class="buttons-div">
-        <button type="button" (click)="breakfastBtn()" class="btn-products">Desayuno</button>
-        <button type="button" (click)="lunchBtn()" class="btn-users">Almuerzo</button>
+        <button type="button" (click)="breakfastBtn()" class="btn-products" value="desayuno">Desayuno</button>
+        <button type="button" (click)="lunchBtn()" class="btn-users" value="almuerzo">Almuerzo</button>
     </div>
     <section class="menu-section" >
-        <aside class="menu-products">
             <section class="container-menu">
                     <ul class ="products-menu" *ngFor="let product of breakfast" (click)="breakfastoOrder(product)">
                         <li>{{product.name}}</li>
@@ -17,8 +16,7 @@
                         <li>$.{{product.price}}</li>
                     </ul>
             </section>
-        </aside>
-        <section class="admin-menu">
+        
             <form class="table-products">
                 Cliente:<input type="text" class="input-name" id="inputName">
                 <i class="fas fa-times"></i>
@@ -43,7 +41,9 @@
                 </div>
                 <button class="logIn-button" type='submit' >Ingresar</button> 
             </form>
-        </section>
+        <img src="../assets/tomate.png" class="img-tomate" alt="Responsive image">
+        <img src="../assets/papas.png" class="img-papas" alt="Responsive image">
     </section>
+   
 </aside>
 

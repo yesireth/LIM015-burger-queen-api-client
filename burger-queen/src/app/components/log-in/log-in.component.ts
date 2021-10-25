@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  response: any;
+/*   response: any; */
   logInForm = new FormGroup({
     email: new FormControl('',Validators.required),
     password : new FormControl('',Validators.required)
