@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   lunch:Array<any>=[];
   breakfast:Array<any>=[];
   selectedItems: any[] = [];
+  contador:any[] = [];
   
   constructor(private productsService: ProductService) { }
   ngOnInit(): void {
@@ -31,6 +32,6 @@ export class MenuComponent implements OnInit {
     this.selectedItems.push({product});
     console.log(this.selectedItems);
     console.log( this.breakfast);
+    this.contador
   }
-
 }
