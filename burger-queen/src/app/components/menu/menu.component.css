@@ -2,12 +2,29 @@
 *{
     font-size: 18px;
 }
+.buttons-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+.btn-breakfast,
+.btn-lunch{
+    background-color:#F5E7BC;
+    outline: none;
+    border:3px solid #C06641;
+    padding: 10px 20px;
+    color: #97310F;
+    border-radius: 10px;
+    margin:0  20px;
+    cursor: pointer;
+}
 .menu-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top:20px ;
     gap: 20px;
 }
 
@@ -48,7 +65,9 @@ li{
     padding: 20px;
     border-radius: 20px;
     position: relative;
+
 }
+
 .div-output,
 .table-order{
     margin-top:5px ;
@@ -58,6 +77,37 @@ li{
 .div-output{
     grid-column: 1/5;
 }
+.abeja{
+    grid-column: 1/5;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.abeja::-webkit-scrollbar-trac{
+    background-color: transparent;
+}
+.abeja::-webkit-scrollbar{
+    width: 5px;
+    height:1px;
+    background-color: #F5F5F5;
+}
+.abeja::-webkit-scrollbar-thumb{
+    background-color: #B34622;
+    border-radius: 10px;
+} 
+/* .table-products-output{
+    overflow-y: scroll;
+}
+.table-products-output::-webkit-scrollbar-trac{
+    background-color: transparent;
+}
+.table-products-output::-webkit-scrollbar{
+    width: 5px;
+    height:5px;
+    background-color: transparent;
+}
+.table-products-output::-webkit-scrollbar-thumb{
+    background-color: transparent;
+} */
 .name-table{
     font-family: 'Roboto', sans-serif;
     border-bottom: 5px solid;
@@ -75,11 +125,11 @@ li{
 }
 
 .name-product{
-    padding: 10px;
+    padding: 5px;
 }
 .name-price,
 .name-cant{
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 .name-amount{
