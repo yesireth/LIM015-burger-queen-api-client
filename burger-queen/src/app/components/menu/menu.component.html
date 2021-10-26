@@ -2,8 +2,8 @@
 <aside>
     <app-header></app-header>
     <div class="buttons-div">
-        <button type="button" (click)="breakfastBtn()" class="btn-products" value="desayuno">Desayuno</button>
-        <button type="button" (click)="lunchBtn()" class="btn-users" value="almuerzo">Almuerzo</button>
+        <button type="button" (click)="breakfastBtn()" class="btn-breakfast" value="desayuno">Desayuno</button>
+        <button type="button" (click)="lunchBtn()" class="btn-lunch" value="almuerzo">Almuerzo</button>
     </div>
     <section class="menu-section" >
             <section class="container-menu">
@@ -25,19 +25,21 @@
                     <p class="name-table">Precio</p>
                     <p class="name-table">Cantidad</p>
                     <p class="name-table"></p>
-                    <form action=""></form>
-                    <div class="div-output" *ngFor="let item of selectedItems" >
-                        <p class="name-product">{{item.product.name}}<br></p>
-                        <p class="name-price">$ {{item.product.price*item.amount}}</p>
-                        <p class="name-cant">
-                            <i class="fas fa-angle-down" (click)="changeAmount(-base,item)"></i>
-                            <span class="name-amount" id="count-{{item.product._id}}">{{item.amount}}</span>
-                            <i class="fas fa-angle-up" (click)="changeAmount(base,item)"></i>
-                        </p>
-                        <button type="button" class="btn-trash">
-                            <i class="fas fa-trash "></i>
-                        </button>
+                    <div class="abeja">
+                        <div class="div-output" *ngFor="let item of selectedItems" >
+                            <p class="name-product">{{item.product.name}}<br></p>
+                            <p class="name-price">$ {{item.product.price*item.amount}}</p>
+                            <p class="name-cant">
+                                <i class="fas fa-angle-down" (click)="changeAmount(-base,item)"></i>
+                                <span class="name-amount" id="count-{{item.product._id}}">{{item.amount}}</span>
+                                <i class="fas fa-angle-up" (click)="changeAmount(base,item)"></i>
+                            </p>
+                            <button type="button" class="btn-trash">
+                                <i class="fas fa-trash "></i>
+                            </button>
+                        </div>
                     </div>
+                    
                 </div>
                 <button class="logIn-button" type='submit' >Ingresar</button> 
             </form>
