@@ -23,6 +23,7 @@ export class MenuComponent implements OnInit {
   breakfast:Array<any>=[];
   selectedItems: Item[] = [];
   base: number = 1;
+  total:number=0
 
   constructor(private productsService: ProductService) { }
 
@@ -42,19 +43,31 @@ export class MenuComponent implements OnInit {
       this.breakfast=[]
   }
   foodOrder(product:Product){
-    if(this.selectedItems){
-      let productsSelect = this.selectedItems.find(element => element.product._id ===product._id)
-      if(productsSelect===undefined){
-        this.selectedItems.push({product,amount:1});
     
+    let productsSelect = this.selectedItems.find(element => element.product._id ===product._id)
+    if(productsSelect===undefined){
+    this.selectedItems.push({product,amount:1});
+      this.getTotal()
       }
-    }
+  }
+  getTotal(){
+   this.total= this.selectedItems.map(item=> item.amount *  item.product.price)
+   .reduce((acc, item) => acc += item, 0);
   }
   changeAmount(base:number,item:Item){
-    item.amount += base
+    if(item.amount+ base === 0){
+      this.deleteOrder(item.product._id);
+    }else{
+      item.amount += base;
+    }
+    this.getTotal();
     /* Item.amount = Item.amount + base */
   }
   deleteOrder(id:string){
     this.selectedItems=  this.selectedItems.filter(item => item.product._id !== id)
+    this.getTotal()
+  }
+  Orderdelete(){
+    this.selectedItems= []
   }
 }

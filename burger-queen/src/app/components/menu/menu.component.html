@@ -19,13 +19,13 @@
         
             <form class="table-products">
                 Cliente:<input type="text" class="input-name" id="inputName">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times" (click)="Orderdelete()"></i>
                 <div class="table-order">
                     <p class="name-table">Nombre</p>
                     <p class="name-table">Precio</p>
                     <p class="name-table">Cantidad</p>
                     <p class="name-table"></p>
-                    <div class="abeja">
+                    <div class="container-orders">
                         <div class="div-output" *ngFor="let item of selectedItems" >
                             <p class="name-product">{{item.product.name}}<br></p>
                             <p class="name-price">${{item.product.price*item.amount}}</p>
@@ -37,9 +37,10 @@
                             <button type="button" class="btn-trash"(click)="deleteOrder(item.product._id)">
                                 <i class="fas fa-trash "></i>
                             </button>
-                            <div>
-                                <p>Total: {{(item.product.price*item.amount) + (item.product.price*item.amount)}} </p>
-                            </div>
+                
+                        </div>
+                        <div>
+                            <p>Total: ${{total}}</p>
                         </div>
                     </div>
                 </div>

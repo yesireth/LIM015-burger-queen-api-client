@@ -77,37 +77,24 @@ li{
 .div-output{
     grid-column: 1/5;
 }
-.abeja{
+.container-orders{
     grid-column: 1/5;
     max-height: 200px;
     overflow-y: scroll;
 }
-.abeja::-webkit-scrollbar-trac{
+.container-orders::-webkit-scrollbar-trac{
     background-color: transparent;
 }
-.abeja::-webkit-scrollbar{
+.container-orders::-webkit-scrollbar{
     width: 5px;
     height:1px;
     background-color: #F5F5F5;
 }
-.abeja::-webkit-scrollbar-thumb{
+.container-orders::-webkit-scrollbar-thumb{
     background-color: #B34622;
     border-radius: 10px;
 } 
-/* .table-products-output{
-    overflow-y: scroll;
-}
-.table-products-output::-webkit-scrollbar-trac{
-    background-color: transparent;
-}
-.table-products-output::-webkit-scrollbar{
-    width: 5px;
-    height:5px;
-    background-color: transparent;
-}
-.table-products-output::-webkit-scrollbar-thumb{
-    background-color: transparent;
-} */
+
 .name-table{
     font-family: 'Roboto', sans-serif;
     border-bottom: 5px solid;
