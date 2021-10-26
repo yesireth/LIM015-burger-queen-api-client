@@ -28,18 +28,20 @@
                     <div class="abeja">
                         <div class="div-output" *ngFor="let item of selectedItems" >
                             <p class="name-product">{{item.product.name}}<br></p>
-                            <p class="name-price">$ {{item.product.price*item.amount}}</p>
+                            <p class="name-price">${{item.product.price*item.amount}}</p>
                             <p class="name-cant">
                                 <i class="fas fa-angle-down" (click)="changeAmount(-base,item)"></i>
                                 <span class="name-amount" id="count-{{item.product._id}}">{{item.amount}}</span>
                                 <i class="fas fa-angle-up" (click)="changeAmount(base,item)"></i>
                             </p>
-                            <button type="button" class="btn-trash">
+                            <button type="button" class="btn-trash"(click)="deleteOrder(item.product._id)">
                                 <i class="fas fa-trash "></i>
                             </button>
+                            <div>
+                                <p>Total: {{(item.product.price*item.amount) + (item.product.price*item.amount)}} </p>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
                 <button class="logIn-button" type='submit' >Ingresar</button> 
             </form>
