@@ -68,6 +68,7 @@ export class MenuComponent implements OnInit {
     this.getTotal()
   }
   Orderdelete(){
+    this.total=0
     this.selectedItems= []
   }
 }

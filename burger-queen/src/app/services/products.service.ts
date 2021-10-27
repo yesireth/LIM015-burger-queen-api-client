@@ -6,7 +6,7 @@ import { Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class ProductService {
-  private Url = "https://chamaburger.herokuapp.com/products"; // URL to web api
+  private Url = "https://chamaburger.herokuapp.com/products?limit=15"; // URL to web api
   private parameters = new  HttpParams();
   private token: any;
 
