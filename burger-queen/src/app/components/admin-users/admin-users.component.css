@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 *{
-    font-size: 18px;
+    font-size: 15px;
 }
 .admin-products{
     display: flex;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 .buttons-div{
-    margin:20px;
+    margin-bottom:15px;
 }
 .btn-products,
 .btn-users{
