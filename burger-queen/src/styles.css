@@ -4,9 +4,12 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 body{
+    position: relative;
     background: #F5E7BC;
     margin: 0;
+    height:100vh ;
 }
+
 .img-papas,
 .img-tomate,
 .img-hoja{

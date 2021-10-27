@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 *{
-    font-size: 18px;
+    font-size: 15px;
 }
 .buttons-div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin:10px;
+    margin-bottom:15px;
 }
 .btn-breakfast,
 .btn-lunch{
@@ -16,7 +16,7 @@
     border:3px solid #C06641;
     padding: 10px 20px;
     color: #97310F;
-    border-radius: 10px;
+    border-radius: 8px;
     margin:0  20px;
     cursor: pointer;
 }
@@ -36,6 +36,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+
 }
 .products-menu{
     list-style: none;
@@ -63,9 +64,11 @@ li{
     width: 600px;
     color: #B34622;
     padding: 20px;
+    padding-bottom: 35px;
     border-radius: 20px;
     position: relative;
-
+    max-height: 450px;
+    position: relative;
 }
 
 .div-output,
@@ -79,25 +82,28 @@ li{
 }
 .container-orders{
     grid-column: 1/5;
-    max-height: 200px;
+    max-height: 280px;
     overflow-y: scroll;
 }
 .container-orders::-webkit-scrollbar-trac{
     background-color: transparent;
 }
 .container-orders::-webkit-scrollbar{
-    width: 5px;
-    height:1px;
+    width: 4px;
+    height:5px;
+/*     height:1px; */
     background-color: #F5F5F5;
 }
 .container-orders::-webkit-scrollbar-thumb{
     background-color: #B34622;
-    border-radius: 10px;
+    border-radius: 50px;
+    width: 4px;
+    height:1px;
 } 
 
 .name-table{
     font-family: 'Roboto', sans-serif;
-    border-bottom: 5px solid;
+    border-bottom: 4px solid;
     padding: 5px;
     text-align: center;
 }
@@ -128,7 +134,8 @@ li{
 .input-name{
     border: none;
     width: 350px;
-    height: 35px;
+    height: 30px;
+    border-radius: 10px;
     color: #B34622;
     background-color: rgba(255, 255, 255, 0.604);
     margin-left: 20px;
@@ -139,7 +146,9 @@ li{
     right:40px;
 }
 .logIn-button{
-    margin-top: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
     color: white;
     background-color: #B34622; 
     outline: none;
@@ -148,4 +157,12 @@ li{
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+}
+.total-amount{
+    display: inline-block;
+    padding: 12px ;
+    padding-left: 245px;
+    grid-column: 1/3;
+    color: #B34622;
+    font-family: 'Roboto', sans-serif;
 }
