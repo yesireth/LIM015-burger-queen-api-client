@@ -18,7 +18,7 @@
             </section>
         
             <form class="table-products" [formGroup]="orderForm">
-                Cliente:<input type="text" class="input-name" id="inputName" formControlName="userName">
+                Cliente:<input type="text" class="input-name" id="inputName" value="{{name}}" formControlName="userName">
                 <i class="fas fa-times" (click)="Orderdelete()"></i>
                 <div class="table-order">
                     <p class="name-table">Nombre</p>
