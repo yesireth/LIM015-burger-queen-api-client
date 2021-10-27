@@ -17,8 +17,8 @@
                     </ul>
             </section>
         
-            <form class="table-products">
-                Cliente:<input type="text" class="input-name" id="inputName">
+            <form class="table-products" [formGroup]="orderForm">
+                Cliente:<input type="text" class="input-name" id="inputName" formControlName="userName">
                 <i class="fas fa-times" (click)="Orderdelete()"></i>
                 <div class="table-order">
                     <p class="name-table">Nombre</p>
@@ -42,7 +42,7 @@
                     </div>
                     <p class="total-amount"> Total: ${{total}}</p>
                 </div>
-                <button class="logIn-button" type='submit' >Ingresar</button> 
+                <button class="logIn-button" type='submit'(click)="SendOrder()">Enviar</button> 
             </form>
         <img src="../assets/tomate.png" class="img-tomate" alt="Responsive image">
         <img src="../assets/papas.png" class="img-papas" alt="Responsive image">

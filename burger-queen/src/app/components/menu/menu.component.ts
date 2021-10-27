@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../../services/products.service';
 
 interface Item{
@@ -18,13 +19,16 @@ interface Product{
 })
 
 export class MenuComponent implements OnInit {
+
   data:Array<any>=[];
   lunch:Array<any>=[];
   breakfast:Array<any>=[];
   selectedItems: Item[] = [];
   base: number = 1;
   total:number=0
-
+  orderForm= new FormGroup({
+  userName: new FormControl("",Validators.required)
+  })
   constructor(private productsService: ProductService) { }
 
   ngOnInit(): void {
@@ -70,5 +74,9 @@ export class MenuComponent implements OnInit {
   Orderdelete(){
     this.total=0
     this.selectedItems= []
+  }
+  SendOrder(){
+  let name =this.orderForm.value.userName
+  alert(name)
   }
 }
