@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+    font-size: 15px;
+}
+.buttons-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:15px;
+}
+.btn-pending,
+.btn-ready{
+    background-color:#F5E7BC;
+    outline: none;
+    border:3px solid #C06641;
+    padding: 10px 20px;
+    color: #97310F;
+    border-radius: 8px;
+    margin:0  20px;
+    cursor: pointer;
+}
+.btn-pending:hover{
+    background-color:#C06641;
+    color: white;
+}
+.btn-ready:hover{
+    background-color:#C06641;
+    color: white;
+}
+.container-orders{
+ display:flex;
+}
+.cards-orders{
+ background-color: #FBF4E1C2;
+ width: 200px;
+ height: 250px;
+ border-radius: 20px;
+ color: #983215;
+ padding: 10px;
+
+}
+.client-orders{
+    text-align:center;
+}
+.btn-readyOrder{
+    background-color:#C06641;
+    color: white;
+    width: 123px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
