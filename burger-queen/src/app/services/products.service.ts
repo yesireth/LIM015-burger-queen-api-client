@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams} from '@angular/common/http';
-import { Observable} from 'rxjs'
+import { Observable } from 'rxjs'
+import { ProductI } from '../models/product-model'
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,24 @@ export class ProductService {
   private Url = "https://chamaburger.herokuapp.com/products?limit=15"; // URL to web api
   private parameters = new  HttpParams();
   private token: any;
-
-  constructor(private http: HttpClient) {  }
-  getProducts(): Observable<any> {
-    //definen los headers
+  private config:object;
+  constructor(private http: HttpClient) {
     this.token = localStorage.getItem('token')
-    const config = {
+    this.config = {
       headers: { token: this.token }
     };
-    return this.http.get(this.Url, config)
+  }
+
+  getProducts(): Observable<any> {
+    //definen los headers
+    return this.http.get(this.Url,this.config)
+  }
+
+  postProducts(data:ProductI): Observable<any> {
+    return this.http.post(this.Url,data,this.config)
+  }
+
+  deleteOneProducts(uid:any): Observable<any> {
+    return this.http.delete("https://chamaburger.herokuapp.com/products?limit=15/"+uid,this.config)
   }
 }
