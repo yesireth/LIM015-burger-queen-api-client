@@ -40,10 +40,12 @@
     border-radius: 20px;
 }
 .div-output,
+.div-input,
 .table-output{
     display: grid;
     grid-template-columns: auto auto auto 120px 120px;
 }
+.div-input,
 .div-output{
     grid-column: 1/6;
 }

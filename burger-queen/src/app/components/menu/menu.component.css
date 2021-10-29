@@ -25,6 +25,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-start;
     gap: 20px;
 }
 
@@ -68,7 +69,6 @@ li{
     border-radius: 20px;
     position: relative;
     max-height: 450px;
-    position: relative;
 }
 
 .div-output,
