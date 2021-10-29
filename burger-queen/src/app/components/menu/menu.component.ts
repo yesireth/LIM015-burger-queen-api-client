@@ -43,7 +43,7 @@ export class MenuComponent implements OnInit {
   foodOrder(product: Product) {
     this.name = this.orderForm.value.userName;
     if (this.name.length === 0) {
-      alert(' Po favor ingrese el nombre del cliente ');
+      alert(' Por favor ingrese el nombre del cliente ');
     } else {
       const productsSelect = this.selectedItems.find(
         (element) => element.product._id === product._id

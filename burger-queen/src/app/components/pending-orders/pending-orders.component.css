@@ -30,6 +30,7 @@
 }
 .container-orders{
  display:flex;
+ justify-content: center;
 }
 .cards-orders{
  background-color: #FBF4E1C2;
