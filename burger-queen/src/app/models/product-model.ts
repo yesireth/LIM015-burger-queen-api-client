@@ -5,7 +5,8 @@ export interface ProductI {
     type: string;
   }
 export interface ItemI {
+/*   client: string; */
   product: ProductI;
   amount: number;
-  userName: string;
+
 }

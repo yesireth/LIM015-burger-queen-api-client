@@ -46,7 +46,8 @@ export class MenuComponent implements OnInit {
     } else {
       const productsSelect = this.selectedItems.find(element => element.product._id === product._id);
       if (productsSelect === undefined) {
-        this.selectedItems.push({ product, amount: 1, userName: this.name });
+        this.selectedItems.push({ product, amount: 1/* , client: this.name  */});
+        console.log(this.selectedItems)
         this.getTotal();
       }
     }
