@@ -9,7 +9,6 @@ import { Order } from '../../models/product-model';
 export class ReadyOrdersComponent implements OnInit {
   orders: Array<any> = [];
   ordersFilter: Array<any> = [];
-
   constructor(private orderService : OrderService) { }
 
   ngOnInit(): void {
@@ -18,12 +17,4 @@ export class ReadyOrdersComponent implements OnInit {
       this.ordersFilter = this.orders.filter((itens) => itens.status === 'delivering')
       console.log(this.orders);
     });
-  }
-
-
-
-    /* this.orderService.getOrderReady(this.objOrder).subscribe((element) => {
-      this.objOrder = element;
-      console.log(element,8888);
-    }); */
   }

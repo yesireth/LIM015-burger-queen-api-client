@@ -31,12 +31,12 @@ export class MenuComponent implements OnInit {
   }
 
   breakfastBtn() {
-    this.breakfast = this.data.filter((itens) => itens.type === 'Desayunos');
+    this.breakfast = this.data.filter((items) => items.type === 'Desayunos');
     this.lunch = [];
   }
 
   lunchBtn() {
-    this.lunch = this.data.filter((itens) => itens.type === 'Bebidas');
+    this.lunch = this.data.filter((items) => items.type === 'Bebidas');
     this.breakfast = [];
   }
 
