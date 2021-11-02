@@ -25,7 +25,7 @@ export class OrderService {
   getOrders(): Observable<any> {
     return this.http.get(this.Url,this.config)
   }
-  deleteOrders(uid:any): Observable<any> {
-    return this.http.delete<Order>(this.Url,this.config)
-  }
+//   deleteOrders(uid:any): Observable<any> {
+//     return this.http.delete<Order>(this.Url,this.config)
+//   }
 }

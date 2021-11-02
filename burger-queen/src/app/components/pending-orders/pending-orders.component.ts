@@ -20,10 +20,10 @@ export class PendingOrdersComponent implements OnInit {
   orderReady(){
 
   }
-  cleanOrder(){
-    this.orderService.deleteOrders(this.objOrder).subscribe((element) => {
-      this.orders = element;
-      console.log(this.orders);
-    });
-  }
+  // cleanOrder(){
+  //   this.orderService.deleteOrders(this.objOrder).subscribe((element) => {
+  //     this.orders = element;
+  //     console.log(this.orders);
+  //   });
+  // }
 }
