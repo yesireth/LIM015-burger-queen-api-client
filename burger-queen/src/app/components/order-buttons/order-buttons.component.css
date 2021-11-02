@@ -1,0 +1,36 @@
+*{
+    font-size: 15px;
+}
+.buttons-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:15px;
+}
+.btn-finished,
+.btn-pending,
+.btn-ready{
+    background-color:#F5E7BC;
+   /*  outline: none; */
+    border:3px solid #C06641;
+    padding: 10px 20px;
+    color: #97310F;
+    border-radius: 10px;
+    margin:0  20px;
+    cursor: pointer;
+    width: 120px;
+}
+
+.btn-pending:focus{
+    background-color:#C06641;
+    color: white;
+}
+.btn-ready:focus{
+    background-color:#C06641;
+    color: white;
+}
+.btn-finished:focus{
+    background-color:#C06641;
+    color: white;
+}

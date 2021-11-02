@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService} from '../../services/products.service';
 import { OrderService} from '../../services/orders.service';
-import{ ProductI , Order, OrderDetail} from '../../models/product-model'
+import { ProductI , Order, OrderDetail} from '../../models/product-model'
 
 @Component({
   selector: 'app-menu',
@@ -79,7 +79,7 @@ export class MenuComponent implements OnInit {
     this.getTotal();
   }
 
-  Orderdelete() {
+  cleanOrder() {
     this.total = 0;
     this.objOrder.products = [];
     this.objOrder.client = '';
@@ -92,7 +92,7 @@ export class MenuComponent implements OnInit {
    this.orderService.addOrders(this.objOrder).subscribe(
     data => {
       console.log(data)
-      this.Orderdelete();
+      this.cleanOrder();
     },
     error => {
       console.log(error)

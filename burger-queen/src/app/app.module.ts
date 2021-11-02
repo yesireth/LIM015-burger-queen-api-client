@@ -14,6 +14,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
+import { OrdersFinishedComponent } from './components/orders-finished/orders-finished.component';
+import { OrderButtonsComponent } from './components/order-buttons/order-buttons.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { UsersComponent } from './components/users/users.component';
     HeaderComponent,
     AdminProductsComponent,
     AdminUsersComponent,
-    MenuComponent
+    MenuComponent,
+    OrdersFinishedComponent,
+    OrderButtonsComponent
   ],
   imports: [
     FormsModule,

@@ -10,6 +10,7 @@ export class OrderService {
   private Url = "https://chamaburger.herokuapp.com/orders";
   private token: any;
   private config:object;
+
   constructor(private http: HttpClient) {
     this.token = localStorage.getItem('token')
     this.config = {
@@ -21,5 +22,10 @@ export class OrderService {
     console.log(data)
     return this.http.post(this.Url,data,this.config)
   }
-
+  getOrders(): Observable<any> {
+    return this.http.get(this.Url,this.config)
+  }
+  deleteOrders(uid:any): Observable<any> {
+    return this.http.delete<Order>(this.Url,this.config)
+  }
 }
