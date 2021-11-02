@@ -17,8 +17,16 @@ export class PendingOrdersComponent implements OnInit {
       console.log(this.orders);
     });
   }
-  orderReady(){
-
+  orderReady(id:string){
+    this.objOrder.status="canceled";
+    this.orderService.updateOrders(id,this.objOrder).subscribe(
+      data => {
+        this.orders = this.orders.filter(item => item._id !== id)
+        console.log(data)
+      },
+      error => {
+        console.log(error)
+      })
   }
   // cleanOrder(){
   //   this.orderService.deleteOrders(this.objOrder).subscribe((element) => {

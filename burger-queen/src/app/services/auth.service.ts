@@ -7,7 +7,7 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private Url = "https://chamaburger.herokuapp.com/auth"; // URL to web api
+  private Url = "https://fireburguer.herokuapp.com/auth"; // URL to web api
   private AuthObject = {
     "email": "",
    "password": ""
