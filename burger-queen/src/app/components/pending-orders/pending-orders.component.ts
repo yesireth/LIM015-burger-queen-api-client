@@ -8,21 +8,24 @@ import { Order } from '../../models/product-model';
 })
 export class PendingOrdersComponent implements OnInit {
   orders: Array<any> = [];
+  ordersFilter: Array<any> = [];
   objOrder = new Order
   constructor(private orderService : OrderService) { }
 
   ngOnInit(): void {
     this.orderService.getOrders().subscribe((element) => {
       this.orders = element;
+      this.ordersFilter = this.orders.filter((itens) => itens.status === 'pending')
       console.log(this.orders);
     });
   }
   orderReady(id:string){
-    this.objOrder.status="canceled";
+    this.objOrder.client="auksilio";
+    this.objOrder.status="delivering";
     this.orderService.updateOrders(id,this.objOrder).subscribe(
       data => {
-        this.orders = this.orders.filter(item => item._id !== id)
-        console.log(data)
+        this.ordersFilter = this.ordersFilter.filter(item => item._id !== id)
+        console.log(this.ordersFilter)
       },
       error => {
         console.log(error)
