@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup,FormControl, Validators} from '@angular/forms'
 import { AuthService } from '../../services/auth.service';
+import jwt from 'jwt-decode';
 
 @Component({
   selector: 'app-log-in',
@@ -29,6 +30,10 @@ export class LogInComponent implements OnInit {
   this.AuthService.Auth(this.logInForm.value).subscribe(
     data => {
       localStorage.setItem('token',data.token)
+      const user:any = jwt(data.token);
+      const userId = user.id;
+      localStorage.setItem('userId', userId)
+      
       this.router.navigate(['/menu'])
     },
     error => {

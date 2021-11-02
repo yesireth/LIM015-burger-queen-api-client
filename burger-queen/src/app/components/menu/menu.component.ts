@@ -31,12 +31,12 @@ export class MenuComponent implements OnInit {
   }
 
   breakfastBtn() {
-    this.breakfast = this.data.filter((itens) => itens.type === 'desayuno');
+    this.breakfast = this.data.filter((itens) => itens.type === 'Desayunos');
     this.lunch = [];
   }
 
   lunchBtn() {
-    this.lunch = this.data.filter((itens) => itens.type === 'almuerzo');
+    this.lunch = this.data.filter((itens) => itens.type === 'Bebidas');
     this.breakfast = [];
   }
 
@@ -46,10 +46,10 @@ export class MenuComponent implements OnInit {
     if (this.objOrder.client.length === 0) {
       alert(' Por favor ingrese el nombre del cliente ');
     } else {
-      const productsSelect = this.objOrder.products.find(element => element.product === objProduct._id);
+      const productsSelect = this.objOrder.products.find(element => element.productId === objProduct._id);
       if (productsSelect === undefined) { //no existe
         this.objOrderDetail = new OrderDetail
-        this.objOrderDetail.product =  objProduct._id;
+        this.objOrderDetail.productId =  objProduct._id;
         this.objOrderDetail.qty =  1;
         this.objOrderDetail.price =  objProduct.price;
         this.objOrderDetail.productName =  objProduct.name;
@@ -66,7 +66,7 @@ export class MenuComponent implements OnInit {
   }
   changeAmount(base: number, item: OrderDetail) {
     if (item.qty + base === 0) {
-      this.deleteOrder(item.product);
+      this.deleteOrder(item.productId);
     } else {
       item.qty += base;
     }
@@ -75,7 +75,7 @@ export class MenuComponent implements OnInit {
   }
 
   deleteOrder(id: string) {
-    this.objOrder.products = this.objOrder.products.filter(item => item.product !== id);
+    this.objOrder.products = this.objOrder.products.filter(item => item.productId !== id);
     this.getTotal();
   }
 
@@ -86,7 +86,8 @@ export class MenuComponent implements OnInit {
   }
 
   SendOrder() {
-   this.objOrder.userId="617186f99e71c8b29cb278c0";
+
+   this.objOrder.userId= localStorage.getItem('userId');
    this.objOrder.status="pending"
 
    this.orderService.addOrders(this.objOrder).subscribe(
@@ -95,6 +96,7 @@ export class MenuComponent implements OnInit {
       this.cleanOrder();
     },
     error => {
+      this.cleanOrder();
       console.log(error)
     })
 

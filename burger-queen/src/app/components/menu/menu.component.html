@@ -31,10 +31,10 @@
                             <p class="name-price">${{item.price*item.qty}}</p>
                              <p class="name-cant">
                                 <i class="fas fa-angle-down" (click)="changeAmount(-base,item)"></i>
-                                <span class="name-amount" id="count-{{item.product}}">{{item.qty}}</span>
+                                <span class="name-amount">{{item.qty}}</span>
                                 <i class="fas fa-angle-up" (click)="changeAmount(base,item)"></i>
                             </p>
-                            <button type="button" class="btn-trash"(click)="deleteOrder(item.product)">
+                            <button type="button" class="btn-trash"(click)="deleteOrder(item.productId)">
                                 <i class="fas fa-trash "></i>
                             </button> 
                 

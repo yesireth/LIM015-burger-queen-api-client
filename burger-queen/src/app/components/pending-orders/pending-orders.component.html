@@ -7,12 +7,12 @@
         <p class="client-time">Hora:09am</p>
         <div class="output-div">
             <div class="client-product">Producto
-                <p *ngFor="let item of objOrder.products">- {{item.product.name}}</p>
+                <p *ngFor="let item of objOrder.products">- {{item.productId.name}}</p>
             </div>  
             <div class="client-amount">Cantidad
                 <p *ngFor="let item of objOrder.products">{{item.qty}}</p>
             </div>
         </div>
-        <button class="btn-readyOrder" (click)="orderReady()">Listo</button>
+        <button class="btn-readyOrder" (click)="orderReady(objOrder._id)">Listo</button>
     </div>
 </section>

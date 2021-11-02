@@ -7,7 +7,7 @@ export interface ProductI {
 
 //NUEVO
 export class Order{
-    userId : string = ""; //usuario logeado
+    userId : any ; //usuario logeado
     client : string= ""; //userName del input
     status : string= "";
     products :  OrderDetail[] = [];
@@ -15,7 +15,7 @@ export class Order{
 
 export class OrderDetail {
    qty: number = 0;
-   product: string = ""; //id del producto
+   productId: string = ""; //id del producto
    price :number = 0;
    productName = ""; 
 }
