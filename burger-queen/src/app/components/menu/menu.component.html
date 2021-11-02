@@ -19,7 +19,7 @@
         
              <form class="table-products" [formGroup]="orderForm">
                 Cliente:<input type="text" class="input-name" id="inputName" value="{{objOrder.client}}" formControlName="userName">
-                <i class="fas fa-times" (click)="Orderdelete()"></i>
+                <i class="fas fa-times" (click)="cleanOrder()"></i>
                 <div class="table-order">
                     <p class="name-table">Nombre</p>
                     <p class="name-table">Precio</p>

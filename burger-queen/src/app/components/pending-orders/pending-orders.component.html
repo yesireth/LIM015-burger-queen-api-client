@@ -1,70 +1,18 @@
 <app-header></app-header>
-<div class="buttons-div">
-    <button type="button" class="btn-pending" value="desayuno">Pendiente</button>
-    <button type="button"  class="btn-ready" value="almuerzo">Listo</button>
-</div>
-<div class="container-orders">
-    <div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
+<app-order-buttons></app-order-buttons>
+<section class="container-orders" >
+    <div class="cards-orders" *ngFor="let objOrder of orders" >
+        <i class="fas fa-times" (click)="cleanOrder()"></i>
+        <p class="client-name">{{objOrder.client}}</p>
         <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
+        <div class="output-div">
+            <div class="client-product">Producto
+                <p *ngFor="let item of objOrder.products">- {{item.product.name}}</p>
+            </div>  
+            <div class="client-amount">Cantidad
+                <p *ngFor="let item of objOrder.products">{{item.qty}}</p>
+            </div>
         </div>
-        <button class="btn-readyOrder" >Listo</button>
+        <button class="btn-readyOrder" (click)="orderReady()">Listo</button>
     </div>
-    <div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
-        <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
-        </div>
-        <button class="btn-readyOrder" >Listo</button>
-    </div>
-    <div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
-        <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
-        </div>
-        <button class="btn-readyOrder" >Listo</button>
-    </div><div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
-        <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
-        </div>
-        <button class="btn-readyOrder" >Listo</button>
-    </div><div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
-        <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
-        </div>
-        <button class="btn-readyOrder" >Listo</button>
-    </div><div class="cards-orders">
-        <p class="client-orders">Cliente:Gissel</p>
-        <p class="client-time">Hora:09am</p>
-        <p class="client">Producto</p>
-        <p class="client">Cantidad</p>
-        <div class="client-products">
-            <p>Agua</p>
-            <p>1</p>
-        </div>
-        <button class="btn-readyOrder" routerLink='/ready-orders'>Listo</button>
-    </div>
-</div>
+</section>

@@ -6,6 +6,7 @@ import { AdminUsersComponent } from './components/admin-users/admin-users.compon
 import { MenuComponent } from './components/menu/menu.component';
 import { PendingOrdersComponent } from './components/pending-orders/pending-orders.component';
 import { ReadyOrdersComponent } from './components/ready-orders/ready-orders.component';
+import { OrdersFinishedComponent } from './components/orders-finished/orders-finished.component';
 
 const routes: Routes = [
 {path:'',component: LogInComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
 {path:'menu',component:MenuComponent},
 {path:'pending-orders',component:PendingOrdersComponent},
 {path:'ready-orders',component:ReadyOrdersComponent},
+{path:'orders-finished',component:OrdersFinishedComponent},
 ];
 
 @NgModule({
