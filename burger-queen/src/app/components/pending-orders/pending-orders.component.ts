@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService} from '../../services/orders.service';
 import { Order } from '../../models/product-model';
+
 @Component({
   selector: 'app-pending-orders',
   templateUrl: './pending-orders.component.html',
@@ -9,17 +10,18 @@ import { Order } from '../../models/product-model';
 export class PendingOrdersComponent implements OnInit {
   orders: Array<any> = [];
   ordersFilter: Array<any> = [];
+  thing:any
   constructor(private orderService : OrderService) { }
 
   ngOnInit(): void {
     this.orderService.getOrders().subscribe((element) => {
       this.orders = element;
-      this.ordersFilter = this.orders.filter((itens) => itens.status === 'pending')
+      this.ordersFilter = this.orders.filter((item) => item.status === 'pending')
       console.log(this.orders);
     });
   }
   orderReady(orderSelected: Order){
-    orderSelected.status="delivering";
+   /*  orderSelected.status="delivering"; */
     this.orderService.updateOrders(orderSelected).subscribe(
       data => {
         this.ordersFilter = this.ordersFilter.filter(item => item._id !== orderSelected._id)

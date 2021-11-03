@@ -35,6 +35,13 @@ export class OrderService {
     }
     return this.http.put(`${this.Url}/${data._id}`,body,this.config)
   }
+  
+  updateOrdersAgain(data:Order): Observable<any> {
+    const body = {
+        "status": "delivered"
+    }
+    return this.http.put(`${this.Url}/${data._id}`,body,this.config)
+  }
 
   getOrderReady(uid:any){
     return this.http.get(`${this.Url}/${uid}`,this.config)

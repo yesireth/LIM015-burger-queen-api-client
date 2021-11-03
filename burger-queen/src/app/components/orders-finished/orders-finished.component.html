@@ -1,2 +1,17 @@
 <app-header></app-header>
 <app-order-buttons></app-order-buttons>
+<section class="container-orders" >
+    <div class="cards-orders" *ngFor="let objOrder of ordersFilter" >
+        <!-- <i class="fas fa-times" (click)="cleanOrder()"></i> -->
+        <p class="client-name">{{objOrder.client}}</p>
+        <p class="client-time">Hora:09am</p>
+        <div class="output-div">
+            <div class="client-product">Producto
+                <p *ngFor="let item of objOrder.products">- {{item.productId.name}}</p>
+            </div>  
+            <div class="client-amount">Cantidad
+                <p *ngFor="let item of objOrder.products">{{item.qty}}</p>
+            </div>
+        </div>
+    </div>
+</section>
