@@ -7,6 +7,7 @@ export interface ProductI {
 
 //NUEVO
 export class Order{
+    _id    : string = "" ;
     userId : any ; //usuario logeado
     client : string= ""; //userName del input
     status : string= "";

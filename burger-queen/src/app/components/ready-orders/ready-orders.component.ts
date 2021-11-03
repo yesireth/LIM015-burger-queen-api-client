@@ -18,3 +18,4 @@ export class ReadyOrdersComponent implements OnInit {
       console.log(this.orders);
     });
   }
+}

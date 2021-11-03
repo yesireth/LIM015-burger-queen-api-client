@@ -9,7 +9,6 @@ import { Order } from '../../models/product-model';
 export class PendingOrdersComponent implements OnInit {
   orders: Array<any> = [];
   ordersFilter: Array<any> = [];
-  objOrder = new Order
   constructor(private orderService : OrderService) { }
 
   ngOnInit(): void {
@@ -19,12 +18,11 @@ export class PendingOrdersComponent implements OnInit {
       console.log(this.orders);
     });
   }
-  orderReady(id:string){
-    this.objOrder.client="auksilio";
-    this.objOrder.status="delivering";
-    this.orderService.updateOrders(id,this.objOrder).subscribe(
+  orderReady(orderSelected: Order){
+    orderSelected.status="delivering";
+    this.orderService.updateOrders(orderSelected).subscribe(
       data => {
-        this.ordersFilter = this.ordersFilter.filter(item => item._id !== id)
+        this.ordersFilter = this.ordersFilter.filter(item => item._id !== orderSelected._id)
         console.log(this.ordersFilter)
       },
       error => {
