@@ -50,7 +50,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #FBF4E1;
+    background-color: rgba(251, 244, 225, 0.878);
     border-radius: 20px;
     color: rgba(186, 102, 25, 0.74);
     cursor: pointer;
@@ -62,7 +62,7 @@ li{
 }
 
 .table-products{
-    background: rgba(251, 244, 225, 0.95);
+    background: rgba(251, 244, 225, 0.885);
     width: 600px;
     color: #B34622;
     padding: 20px;
