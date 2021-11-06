@@ -1,0 +1,52 @@
+
+<aside>
+    <app-header></app-header>
+    <div class="buttons-div">
+        <button type="button" (click)="breakfastBtn()" class="btn-breakfast">Desayuno</button>
+        <button type="button" (click)="lunchBtn()" class="btn-lunch">Bebidas</button>
+    </div>
+    <section class="menu-section" >
+            <section class="container-menu">
+                    <ul class ="products-menu" *ngFor="let product of breakfast" (click)="foodOrder(product)">
+                        <li>{{product.name}}</li>
+                        <li>$.{{product.price}}</li>
+                    </ul>
+                    <ul class ="products-menu" *ngFor="let product of lunch"  (click)="foodOrder(product)">
+                        <li>{{product.name}}</li>
+                        <li>$.{{product.price}}</li>
+                    </ul>
+            </section>
+        
+             <form class="table-products" [formGroup]="orderForm">
+                Cliente:<input type="text" class="input-name" id="inputName" value="{{objOrder.client}}" formControlName="userName">
+                <i class="fas fa-times" (click)="cleanOrder()"></i>
+                <div class="table-order">
+                    <p class="name-table">Nombre</p>
+                    <p class="name-table">Precio</p>
+                    <p class="name-table">Cantidad</p>
+                    <p class="name-table"></p>
+                     <div class="container-orders">
+                        <div class="div-output" *ngFor="let item of objOrder.products" >
+                            <p class="name-product">{{item.productName}}<br></p>
+                            <p class="name-price">${{item.price*item.qty}}</p>
+                             <p class="name-cant">
+                                <i class="fas fa-angle-down" (click)="changeAmount(-base,item)"></i>
+                                <span class="name-amount">{{item.qty}}</span>
+                                <i class="fas fa-angle-up" (click)="changeAmount(base,item)"></i>
+                            </p>
+                            <button type="button" class="btn-trash"(click)="deleteOrder(item.productId)">
+                                <i class="fas fa-trash "></i>
+                            </button> 
+                
+                        </div>
+                    </div> 
+                    <p class="total-amount"> Total: ${{total}}</p>
+                </div>
+                <button class="logIn-button" type='submit'(click)="SendOrder()">Enviar</button> 
+            </form> 
+        <img src="../assets/tomate.png" class="img-tomate" alt="Responsive image">
+        <img src="../assets/papas.png" class="img-papas" alt="Responsive image">
+    </section>
+   
+</aside>
+
