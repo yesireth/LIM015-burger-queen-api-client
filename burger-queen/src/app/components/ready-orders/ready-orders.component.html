@@ -11,7 +11,7 @@
             </div>  
             <div class="client-amount">Cantidad
                 <p *ngFor="let item of objOrder.products">{{item.qty}}</p>
-            </div>
+            </div> 
         </div>
         <button class="btn-orderFinished" (click)="orderFinished(objOrder)">Entregado</button>
     </div>
